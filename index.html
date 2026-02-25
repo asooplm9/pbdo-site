@@ -19,6 +19,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 20px;
             min-height: 100vh;
         }
@@ -29,28 +30,16 @@
             background: rgba(10, 15, 10, 0.95);
             border: 1px solid var(--neon-green);
             border-radius: 15px;
-            padding: 30px;
+            padding: 40px 30px;
             box-shadow: var(--glow);
             position: relative;
-        }
-
-        /* بخش لوگوی اختصاصی بازسازی شده از روی تصویر ۱ */
-        .logo-container {
-            text-align: center;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 10px var(--neon-green));
-        }
-
-        .logo-svg {
-            width: 160px;
-            height: 160px;
         }
 
         h1 {
             color: var(--neon-green);
             text-align: center;
-            font-size: 22px;
-            margin: 10px 0;
+            font-size: 24px;
+            margin: 0 0 10px 0;
             text-shadow: 0 0 8px rgba(0, 255, 102, 0.6);
         }
 
@@ -58,8 +47,9 @@
             text-align: center;
             color: #888;
             font-size: 12px;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            font-weight: bold;
         }
 
         /* نوار اخبار متحرک */
@@ -67,7 +57,7 @@
             background: rgba(0, 255, 102, 0.05);
             border: 1px solid rgba(0, 255, 102, 0.2);
             padding: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             overflow: hidden;
             white-space: nowrap;
         }
@@ -84,12 +74,11 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* فرم گزارش‌دهی عملیاتی */
+        /* فرم گزارش‌دهی */
         .op-form {
             background: #0c0f0c;
             border-right: 4px solid var(--neon-green);
             padding: 20px;
-            margin-top: 10px;
         }
 
         .form-label {
@@ -98,6 +87,8 @@
             font-size: 14px;
             font-weight: bold;
             margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 255, 102, 0.2);
+            padding-bottom: 5px;
         }
 
         select, textarea, button {
@@ -120,73 +111,59 @@
             cursor: pointer;
             transition: 0.3s;
             margin-top: 20px;
+            text-transform: uppercase;
         }
 
         button:hover {
             box-shadow: 0 0 20px var(--neon-green);
-            transform: scale(1.02);
+            transform: translateY(-2px);
         }
 
         .footer {
             text-align: center;
-            margin-top: 35px;
+            margin-top: 40px;
             font-size: 10px;
             color: #444;
             border-top: 1px solid #222;
-            padding-top: 15px;
-            line-height: 1.6;
+            padding-top: 20px;
         }
 
-        .auth-link {
+        .secure-tag {
             color: var(--neon-green);
-            text-decoration: none;
-            border: 1px solid var(--neon-green);
-            padding: 4px 12px;
-            border-radius: 10px;
-            display: inline-block;
+            font-size: 9px;
             margin-top: 10px;
+            display: block;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
 
     <div class="main-frame">
-        <div class="logo-container">
-            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path d="M45 155 Q10 120 25 60 M155 155 Q190 120 175 60" fill="none" stroke="var(--neon-green)" stroke-width="2.5" opacity="0.6"/>
-                <path d="M100 190 L35 145 V55 L100 20 L165 55 V145 Z" fill="none" stroke="var(--neon-green)" stroke-width="4"/>
-                <circle cx="100" cy="110" r="32" fill="none" stroke="var(--neon-green)" stroke-width="1.5" stroke-dasharray="6,4"/>
-                <path d="M100 35 V170 M85 55 H115" stroke="var(--neon-green)" stroke-width="6" stroke-linecap="round"/>
-                <path d="M75 55 Q50 20 30 65 M125 55 Q150 20 170 65" fill="none" stroke="var(--neon-green)" stroke-width="3"/>
-                <path d="M85 85 Q100 55 115 85" fill="none" stroke="var(--neon-green)" stroke-width="2.5"/>
-            </svg>
-        </div>
-
         <h1>سامانه پدافند زیستی (PBDO)</h1>
         <div class="subtitle">POPULAR BIO-DEFENSE ORGANIZATION</div>
 
         <div class="ticker-wrap">
             <div class="ticker-move">
-                وضعیت سیستم: پایداری لایه ۱ ... پایش مداوم زیستی در جریان است ... تمامی گزارشات توسط واحد CMU تحلیل می‌گردد ... امنیت شبکه برقرار است.
+                وضعیت شبکه: ایمن ... پایش لایه‌های بیولوژیک در جریان است ... تمامی گزارشات به واحد CMU ارسال می‌گردد ... دسترسی سطح ۱ فعال شد.
             </div>
         </div>
 
         <div class="op-form">
-            <span class="form-label">[ ثبت گزارش مشاهده مشکوک ]</span>
+            <span class="form-label">[ واحد ثبت گزارشات مردمی ]</span>
             <select>
-                <option>نوع تهدید زیستی را انتخاب کنید...</option>
-                <option>تلفات غیرطبیعی دام و طیور</option>
-                <option>آلودگی مشکوک منابع آب</option>
-                <option>علائم بیماری ناشناخته در منطقه</option>
-                <option>سایر موارد مشکوک</option>
+                <option>انتخاب نوع فوریت...</option>
+                <option>مشاهده موارد مشکوک زیستی</option>
+                <option>آلودگی منابع حیاتی</option>
+                <option>تلفات غیرطبیعی</option>
             </select>
-            <textarea rows="4" placeholder="شرح دقیق وضعیت مشاهده شده را اینجا بنویسید..."></textarea>
-            <button onclick="alert('گزارش عملیاتی شما با موفقیت ثبت شد. کد رهگیری: ' + Math.floor(Math.random()*100000))">ارسال به واحد مانیتورینگ</button>
+            <textarea rows="5" placeholder="جزئیات عملیاتی و محل مشاهده..."></textarea>
+            <button onclick="alert('گزارش با موفقیت در لایه امنیتی ذخیره شد. کد رهگیری: ' + Math.floor(Math.random()*900000 + 100000))">تایید و ارسال نهایی</button>
         </div>
 
         <div class="footer">
-            © 2026 PBDO.TECH | پدافند غیرعامل جمهوری اسلامی ایران <br>
-            <a href="#" class="auth-link">ورود پرسنل (Authorized Only)</a>
+            © 2026 PBDO.TECH | مرکز عملیات پدافند غیرعامل <br>
+            <span class="secure-tag">SSL ENCRYPTED SERVER | کلایه داده‌ها رمزنگاری می‌شوند</span>
         </div>
     </div>
 
