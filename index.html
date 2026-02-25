@@ -6,31 +6,45 @@
     <title>سازمان پدافند زیستی مردمی | PBDO</title>
     <style>
         body { background-color: #0b1a10; color: #e0e0e0; font-family: Tahoma, Arial; text-align: center; padding: 20px; margin: 0; }
-        .container { max-width: 600px; margin: 50px auto; border: 1px solid #2e7d32; padding: 30px; border-radius: 15px; background: rgba(0,0,0,0.8); box-shadow: 0 0 20px rgba(76, 175, 80, 0.2); }
-        h1 { color: #4caf50; font-size: 2.2em; line-height: 1.5; margin-bottom: 10px; }
-        .subtitle { color: #81c784; font-size: 1.1em; margin-bottom: 30px; }
-        .status-box { background: #1b2e20; padding: 15px; border-radius: 8px; border-right: 5px solid #4caf50; margin: 30px 0; font-size: 1.1em; }
-        .status-text { color: #4caf50; font-weight: bold; }
-        .content { line-height: 1.8; margin-bottom: 40px; text-align: justify; padding: 0 10px; }
-        .footer-info { border-top: 1px dashed #2e7d32; padding-top: 20px; font-size: 0.9em; }
-        .official-link { color: #4caf50; text-decoration: none; font-weight: bold; }
-        .admin-id { color: #81c784; margin-top: 10px; font-weight: bold; }
+        .container { max-width: 650px; margin: 40px auto; border: 1px solid #2e7d32; padding: 35px; border-radius: 20px; background: rgba(0,0,0,0.9); box-shadow: 0 0 30px rgba(76, 175, 80, 0.2); }
+        
+        /* استایل لوگو با افکت تپش */
+        .logo-container { margin-bottom: 20px; }
+        .logo { width: 140px; height: auto; border-radius: 50%; border: 2px solid #4caf50; padding: 8px; animation: pulse 3s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(76, 175, 80, 0); } 100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); } }
+        
+        h1 { color: #4caf50; font-size: 2em; margin: 10px 0; letter-spacing: 1px; }
+        .subtitle { color: #81c784; font-size: 1.1em; margin-bottom: 25px; opacity: 0.8; }
+        
+        .status-box { background: #1b2e20; padding: 15px; border-radius: 10px; border-right: 5px solid #4caf50; margin: 30px 0; font-size: 1.2em; border-left: 1px solid #2e7d32; }
+        .status-dot { color: #4caf50; animation: blink 1.5s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.2; } 100% { opacity: 1; } }
+        
+        .content { line-height: 2; margin-bottom: 40px; text-align: justify; font-size: 1em; padding: 0 15px; }
+        .footer-info { border-top: 1px dashed #2e7d32; padding-top: 25px; font-size: 0.9em; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .official-link { color: #4caf50; text-decoration: none; font-weight: bold; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .official-link:hover { border-bottom: 1px solid #4caf50; }
+        .admin-id { background: #2e7d32; color: #fff; padding: 3px 12px; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo-container">
+            <img src="logo.png" alt="PBDO Logo" class="logo">
+        </div>
+        
         <h1>سازمان پدافند زیستی مردمی</h1>
-        <div class="subtitle">(Popular Bio-Defense Organization)</div>
+        <div class="subtitle">Popular Bio-Defense Organization (PBDO)</div>
         
         <div class="status-box">
-            وضعیت شبکه: <span class="status-text">عملیاتی / در حال پایش زیستی</span>
+            وضعیت شبکه: <span class="status-dot">●</span> <span style="color: #4caf50;">عملیاتی و در حال پایش</span>
         </div>
 
-        <p class="content">این درگاه، مرجع رسمی اطلاع‌رسانی و آموزش‌های تخصصی در حوزه پدافند غیرعامل و مقابله با تهدیدات بیولوژیک است. تمامی فعالیت‌ها تحت نظارت واحد پایش مرکزی انجام می‌گیرد.</p>
+        <p class="content">این درگاه، تنها مرجع رسمی اطلاع‌رسانی عملیات‌های پدافند غیرعامل در حوزه تهدیدات بیولوژیک است. تمامی گزارش‌های دریافتی از سراسر کشور توسط واحد پایش مرکزی (CMU) به صورت شبانه‌روزی تحلیل و بررسی می‌گردد.</p>
 
         <div class="footer-info">
-            <p>ارتباط با ستاد مرکزی: <a href="mailto:admin@pbdo.tech" class="official-link">admin@pbdo.tech</a></p>
-            <div class="admin-id">شناسه مدیریت عملیات: M.V</div>
+            <div>ستاد مرکزی: <a href="mailto:admin@pbdo.tech" class="official-link">admin@pbdo.tech</a></div>
+            <div class="admin-id">شناسه مدیریت: M.V</div>
         </div>
     </div>
 </body>
